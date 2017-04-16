@@ -26,7 +26,7 @@ endfunction
 
 " }}}1
 function! vimtex#index#create(index) abort " {{{1
-  let l:index = extend(deepcopy(s:index), a:index)
+  let l:index = extend(a:index, deepcopy(s:index), 'keep')
   let l:vimtex = get(b:, 'vimtex', {})
 
   let l:bufnr = bufnr('')
